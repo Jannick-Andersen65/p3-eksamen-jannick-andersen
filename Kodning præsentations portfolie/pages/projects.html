@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min præsentationsportfolie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <nav class="topnav">
+        <a href="../index.html"><img src="../images/web-optimized/logo1-web.png" alt="Logo, Jannick Design"></a>
+        <div class="hamburger-menu"><img src="../images/web-optimized/menu-web.png" alt="Hamburger menu"></div>
+
+        <ul class="nav-menu">
+            <li><a href="../pages/projects.html">PROJECTS</a></li>
+            <li><a href="../pages/about.html">ABOUT</a></li>
+            <li><a href="../pages/contact.html">CONTACT</a></li>
+        </ul>
+
+    </nav>
+    <!--script til header-->
+    <script>
+        burgermenu = document.querySelector(".hamburger-menu");
+        burgermenu.onclick = function () {
+            navbar = document.querySelector(".nav-menu");
+            navbar.classList.toggle("active");
+        }
+    </script>
+
+    <div class="section1">
+
+        <h1>My projects</h1>
+
+        <div class="product" id="product-1">
+            <a class="product1"><img src="../images/web-optimized/Forsikringscideo-web.png" alt="Video for a mock insurance company 'Tommel Forsikring', edited by the creator of the site"></a>
+            
+                <h1>Video Editing</h1>
+                <p>Insurance ad for "Tommel Forsikring"</p>
+               
+        </div>
+
+        <div class="product" id="product-2">
+            <a class="product1"><img src="../images/web-optimized/News-app-web.png" alt="Image of Anchor a news application"></a>
+            
+                <h1>Apps</h1>
+                <p>Anchor, a news app tailord to your needs</p>
+            
+        </div>
+        
+        <div class="product" id="product-3">
+            <a class="product1"><img src="../images/web-optimized/css-animation-laptop-web.png" alt="image of a bear with a ball, animation made in css"></a>
+            
+            <h1>CSS Animations</h1>
+            <p>Animation made with HTML and CSS</p>
+           
+        </div>
+
+        <div class="product" id="product-4">
+            <a class="product1"><img src="../images/web-optimized/Movingart-web.png" alt="Moving art of the wheatfield with cypresses painting, originally by Vincent Van Gogh"></a>
+            
+                <h1>Moving Arts</h1>
+                <p>Dive into classic art, with a modern twist</p>
+            
+        </div>
+
+        <div class="product" id="product-5">
+            <a class="product1"><img src="../images/web-optimized/visitkort-wayz-web.png" alt="3D render of buisness cards with the name WAYZ"></a>
+            
+            <h1>3D Renders</h1>
+                <p>3D rendered buisness cards</p>   
+            
+        </div>
+
+        <div class="product" id="product-6">
+            <a class="product1"><img src="../images/web-optimized/penportrait-web.png" alt="Pen portrait of the creator behind the website, made in illustrator"></a>
+            <h1>Illustrations</h1>
+            <p>Personal pen portraits</p>
+        </div>
+
+    
+    </div>
+
+    <div class="project-section">
+        <div class="display-portfolio">
+
+
+            <div class="display-container">
+    
+                <!-- id's used for anchor-tags -->
+
+                    <div class="display-product1-project">
+                        <div class="work1-project" id="display-project-1">
+                            <a class="product1"><img src="../images/web-optimized/Forsikringscideo-web.png" alt="Video for a mock insurance company 'Tommel Forsikring', edited by the creator of the site"></a>
+                            <div class="display-text-project">
+                                <h1>Video Editing</h1>
+                                 <p>Insurance ad for "Tommel Forsikring"</p>
+                            </div>
+                            
+                        </div>
+        
+                        <div class="work1-project" id="display-project-2">
+                            <a class="product1"><img src="../images/web-optimized/News-app-web.png" alt="Image of Anchor a news application"></a>
+                            <div class="display-text-project">
+                                <h1>Apps</h1>
+                                 <p>Anchor, a news app tailord to your needs</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="display-product2-project">
+                        <div class="work2-project" id="display-project-3">
+                            <a class="product1"><img src="../images/web-optimized/css-animation-laptop-web.png" alt="image of a bear with a ball, animation made in css"></a>
+                            <div class="display-text-project">
+                                <h1>CSS Animations</h1>
+                                <p>Animation made with HTML and CSS</p>
+                            </div>
+                        </div>
+        
+                        <div class="work2-project" id="display-project-4">
+                            <a class="product1"><img src="../images/web-optimized/Movingart-web.png" alt="Moving art of the wheatfield with cypresses painting, originally by Vincent Van Gogh"></a>
+                            <div class="display-text-project">
+                            <h1>Moving Arts</h1>
+                            <p>Dive into classic art, with a modern twist</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="display-product3-project">
+                        <div class="work3-project" id="display-project-5">
+                            <a class="product1"><img src="../images/web-optimized/visitkort-wayz-web.png" alt="3D render of buisness cards with the name WAYZ"></a>
+                            <div class="display-text-project">
+                                <h1>3D Renders</h1>
+                                <p>3D rendered buisness cards</p>
+                            </div>
+                        </div>
+        
+                        <div class="work3-project">
+                            <a class="product1" id="display-project-6"><img src="../images/web-optimized/penportrait-web.png" alt="Pen portrait of the creator behind the website, made in illustrator"></a>
+                            <div class="display-text-project">
+                                <h1>Illustrations</h1>
+                                <p>Personal pen portraits</p>
+                            </div>
+                        </div>
+                    </div>
+        
+            
+                </div>
+            </div>
+    </div>
+   
+
+    <footer>
+        
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/web-optimized/logo2-web.png" alt="Logo, Jannick Design" class="footer-img">
+            </div>
+
+            <hr>
+            
+            <div class="footer-title">
+                <h1>Contact</h1>
+            </div>
+            <p>Email - jannick.q9osn@aleeas.com</p>
+            <p>Phone - +45 22963130</p>
+            <hr>
+            <p>© Jannick Design</p>
+        </div> 
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min præsentationsportfolie</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <nav class="topnav">
+        <a href="../index.html"><img src="../images/web-optimized/logo1-web.png" alt="Logo, Jannick Design"></a>
+        <div class="hamburger-menu"><img src="../images/web-optimized/menu-web.png" alt="Hamburger menu"></div>
+
+        <ul class="nav-menu">
+            <li><a href="../pages/projects.html">PROJECTS</a></li>
+            <li><a href="../pages/about.html">ABOUT</a></li>
+            <li><a href="../pages/contact.html">CONTACT</a></li>
+        </ul>
+
+    </nav>
+    <!--script til header-->
+    <script>
+        burgermenu = document.querySelector(".hamburger-menu");
+        burgermenu.onclick = function () {
+            navbar = document.querySelector(".nav-menu");
+            navbar.classList.toggle("active");
+        }
+    </script>
+    <div id="contact-section">
+
+        <!-- form used for contact-information -->
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="input">
+                <div class="contact-title">
+                <h1>Get in touch</h1>
+                </div>
+                <input type="hidden" name="access_key" value="bf0fc007-4bc3-41fc-a280-e34d94a9b635">
+                <input type="text" name="Name" placeholder="Your name" class="contact-inputs" required>
+                <input type="text" name="E-mail" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="Text-field" id="Text" rows="10" placeholder="Your message" class="message-input" required></textarea>
+                <button id="contact-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/web-optimized/logo2-web.png" alt="Logo, Jannick Design" class="footer-img">
+            </div>
+
+            <hr>
+            
+            <div class="footer-title">
+                <h1>Contact</h1>
+            </div>
+            <p>Email - jannick.q9osn@aleeas.com</p>
+            <p>Phone - +45 22963130</p>
+            <hr>
+            <p>© Jannick Design</p>
+        </div> 
+        
+    </footer>
+    
+</body>
+</html>

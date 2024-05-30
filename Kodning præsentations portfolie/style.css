@@ -1,0 +1,1011 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+nav {
+    position: fixed;
+    display: flex;
+    background: rgb(255, 255, 255);
+    height: 95px;
+    width: 100%;
+    z-index: 1;
+
+}
+
+/* pushes the logo and menu to either side, alternative to space around
+here you can deine the left and right padding for each item. */
+
+.topnav{
+    justify-content: space-between;
+}
+
+.topnav a img{
+    padding-top: 20px;
+    padding-left: 25px;
+    width:150px;
+}
+
+
+.hamburger-menu img{
+    cursor: pointer;
+    width: 75px;
+    height: auto;
+    padding-top: 35px;
+    padding-right: 25px;
+}
+
+
+
+
+/* Hamburger menu text decoration, doesn't work on mobile, since they click */
+.nav-menu a{
+    color: black;
+    font-size: 20px;
+    font-family: "Karla", sans-serif;
+
+}
+
+/* hamburger menu-items hover effect */
+
+.topnav a:hover{
+    text-decoration: underline;
+    text-decoration-color: #5673A7;
+    
+}
+
+/* 
+- nav-menu margin is where the start of the roll down menu start.
+Since this have to be under the topnav, we start it at 85px (under it) to avoide overlapping 
+- Heigh is set to 0, so it doesn't show up until it's activated.
+- overflow (hidden), so it's not showd until activatex
+*/
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #ffffff;
+    margin-top: 95px;
+    height: 0;
+    gap:80px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.nav-menu.active {
+    height: 45vh;
+}
+
+.section1{
+    padding-top: 150px;
+    margin-left: 4vh;
+    margin-right: 4vh;
+}
+
+.section1 h1 >a{
+    color: #1e1e1e;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* overflow set to hidden, so portrait doesn't reach outside the box */
+
+.info-cardhero{
+    background-color: #1e1e1e;
+    overflow: hidden;
+    border-radius: 12px;
+    color: #d9d9d9;
+    min-height: 600px;
+    box-shadow:  0 10px 10px #00000030;    
+}
+
+.info-cardhero h1{
+    color: #5673A7;
+    display: flex;
+    font-size: 2.986rem;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    padding-top:6vh;
+}
+
+.info-cardhero p{
+    font-size: 1rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 4vh;
+}
+
+.portrait{
+    display: flex;
+    justify-content: flex-end;
+}
+.portrait img{
+    width: 50%;
+}
+    
+
+.project-section{
+    padding-top: 0px;
+}
+
+.product{
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    color: #d9d9d9;
+    min-height: 600px;
+    background-color: #1e1e1e;
+    box-shadow:  0 10px 10px #00000030;
+    border-radius: 12px;
+    margin-top:6vh;
+    transition: 0.3s;
+    
+}
+
+/* animation "prodcut:hover" doesnt' work on mobile, but will on desktop */
+
+.product:hover{
+    transform: scale(1.02);
+}
+
+.product h1{
+    font-size: 2.986rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.product p{
+    font-size: 1rem;
+    margin-top: 1vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    margin-bottom: 6vh;
+}
+
+.product a{
+    width: 100%;
+    height: 100%;
+}
+
+.product img{
+    margin-top: 6vh;
+    width: 100%;
+    height: 100%;
+
+}
+
+.info-panel{
+    display: none;
+}
+
+.section2{
+    margin-top: 6vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+
+.section2 h1{
+    font-family: "Montserrat", sans-serif;
+    color: #1e1e1e;
+}
+
+/* display-portfolio set to none, on mobile so it doesn't show up */
+
+.display-portfolio{
+    display: none;
+}
+
+.product-slideshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    box-shadow:  0 10px 10px #00000030;
+    margin-top:4vh;
+    min-height: 350px;
+    border-radius: 12px;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width:none;
+}
+
+/* webkit-scrollbar does the same as scrollbar-width:none, but for macos */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* flex is a short-hand for flex grow, flex shrink and flex basis/
+the object-fit cover will make sure the initial image keeps it's true size*/
+
+.slideshow-imgs{
+    flex: 1 0 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slideshow-imgs a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-imgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* slider nav placement */
+
+.slider-nav{
+    display: flex;
+    position: absolute;
+    column-gap: 1rem;
+    bottom: 1rem;
+
+}
+
+/* slider nav dots + animation */
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 75%;
+    transition: 0.3s;
+
+}
+
+.product-desktop{
+    display: none;
+}
+
+/* text area for the "new section, "skills" on the About-page */
+
+.text-area {
+    margin-top: 6vh;
+    margin-bottom: 7vh;
+}
+
+
+#contact-section{
+    padding-top: 150px;
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+
+.contact-title h1{
+    font-size: 2.986rem;
+    font-family: "Montserrat", sans-serif;
+    color: #5673A7;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    min-height: 600px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+
+.contact-inputs{
+    font-size: 0.833rem;
+    font-family: "Montserrat", sans-serif;
+    height: 45px;
+    padding-left: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+/* contact input height interfers with text-input "rows"-command. therefore separate class*/
+
+.message-input{
+    font-size: 0.833rem;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 25px;
+    padding-top: 2vh;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+
+#contact-button{
+    cursor: pointer;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: #5282db;
+    color: white;
+    margin-top:6vh;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 6vh;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+#contact-button:hover{
+    background-color: #5673A7;
+}
+
+
+
+footer{ 
+    color: #d9d9d9;
+    margin-top: 6vh;
+}
+
+.footer-content{
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 4vh;
+}
+
+.footer-logo{
+    display: flex;
+    align-self: center;
+    padding-top: 4vh;
+}
+
+.footer-logo img{
+    width: 20vh;
+}
+
+.footer-title{
+    text-align: center;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+
+
+
+/* Hr is creates a break, or functions as a seperator, in this case the for the footer sections */
+
+.footer-content hr{
+    width: 100%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+@media (min-width: 700px) {
+ 
+    *{
+        margin: 0;
+        padding:0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        z-index:1;
+        
+    }
+    
+    body{
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+    }
+    nav {
+        font-size: 1rem;
+        font-family: "Karla", sans-serif;
+        position: fixed;
+        display: flex;
+        
+    }
+    
+    /* pushes the logo and menu to either side, alternative to space around
+    here you can deine the left and right padding for each item. */
+    
+    .topnav{
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        height: 100%;
+        width: 30vh;
+        min-width: 30vh;
+        
+    }
+    
+    
+    .topnav a img{
+        padding-top: 20px;
+        padding-left: 0px;
+        width:150px;
+    }
+
+/* href was set on the whole navbar, fix was to set a height to 0 */
+    
+    .topnav a{
+        height: 25px;
+    }
+
+    .hamburger-menu{
+        display: none;
+        cursor: pointer;
+        width: 0px;
+        height: 0px;
+        margin-top:0px;
+        margin-right: 0px;
+        
+    }
+    
+    /* Hamburger menu text decoration, doesn't work on mobile, since they click */
+    .nav-menu a{
+        color: black;
+        font-size: 20px;
+    
+    }
+    
+    /* hamburger menu-items hover effect */
+    
+    .topnav a:hover{
+        text-decoration: none;
+        text-decoration-color: #d9d9d9;
+    }
+
+    /*
+    - "nav-menu li" used to create hower animation. 
+    - "nav-menu li" used for avoiding issues with the whole topnav,
+    such as the logo. */
+
+    .nav-menu li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .nav-menu li ::after{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #5673A7;
+        transition: width 0.3s;
+    }
+
+    .nav-menu li :hover::after{
+        width: 100%;
+    }
+
+    
+    /* 
+    - nav-menu margin is where the start of the roll down menu start.
+    Since this have to be under the topnav, we start it at 85px (under it) to avoide overlapping 
+    - Heigh is set to 0, so it doesn't show up until it's activated.
+    - overflow (hidden), so it's not showd until activatex
+    -Margin-top set to 95px, so it doesn't overlap with logo.
+    -Pading bottom set to 95px, so it balances the top margin, and is now centeret. 
+    */
+    
+    .nav-menu{
+        display: flex;
+        background-color: #ffffff;
+        margin-top: 95px;
+        padding-bottom: 95px;
+        height: 100%;
+        gap:80px;
+        width: 0;
+        overflow: visible;
+        transition: 0s;
+    }
+    
+    .nav-menu.active {
+        height: 0vh;        
+    }
+    
+    /* secition1, already has a top padding of 95, it's still active, and used for padding on sides. */
+    
+    .section1{
+      display: none;
+    }
+    
+    
+    .info-cardhero{
+        display: none;
+        
+    }
+
+    .info-panel{
+        display: flex;
+        color: #5673A7;
+        margin-left: 30vh;
+        padding-top: 95px;
+              
+    }
+
+    .panel-container{
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        margin-left: 4vh;
+        margin-right: 4vh;       
+        margin-bottom: 6vh;
+        padding-left: 8vh;
+        height: 65vh;
+        
+
+    }
+
+    .panel-container h1{
+        padding-top: 8vh;
+        font-family: "Montserrat", sans-serif;
+        font-size: 5rem;
+    }
+
+    .panel-container p{
+        color: #d9d9d9;
+        padding-right: 8vh;
+    }
+
+    .panel-content{
+        height: 100%;
+    }
+
+    .panel-content img{
+        box-sizing: border-box;
+        display: flex;
+        align-items: end;
+        width: 20%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .info-portrait{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .section2{
+        display: none;
+    }
+
+    /* margin on the section is set to 30vh left, so it doesn't interfer with nav-bar. */
+    .display-portfolio{
+        display: block;
+        box-sizing: border-box;
+        margin-left: 30vh;
+        color: #d9d9d9;
+    }
+
+    .display-container{
+        padding-left: 4vh;
+        padding-right: 4vh;
+    }
+
+    .display-text{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 5vh;
+        margin-top: 40vh;
+
+    }
+
+    .display-text h1{
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .product1 img{
+        max-height: 300px;
+    }
+
+    .display-product1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4vh;
+    }
+
+    .display-product2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4vh;
+        margin-top: 4vh;
+    }
+
+    .display-product3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4vh;
+        margin-top: 4vh;
+    }
+
+
+
+    .display-product1 img{
+        display: flex;
+        max-height: 300px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10vh;
+    }
+
+    .display-product2 img{
+        display: flex;
+        max-height: 300px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10vh;
+    }
+
+    .display-product3 img{
+        display: flex;
+         max-height: 300px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10vh;
+    }
+
+
+    .work1{
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 60vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+   
+    }
+
+    .work2{
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 60vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+      
+    }
+
+    .work3{
+        display:flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 60vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+        
+    }
+
+    .work1:hover{
+        transform: scale(1.02);
+    }
+
+    .work2:hover{
+        transform: scale(1.02);
+    }
+
+    .work3:hover{
+        transform: scale(1.02);
+    }
+
+    /* uses a div to move the display-portfolio to align better on site */
+
+    .project-section{
+        padding-top: 95px;
+    }
+    
+    /* Projects display code */
+
+    .display-text-project{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        position: relative;
+        padding-top: 10vh
+
+    }
+
+    .display-text-project h1{
+        text-align: center;
+    }
+
+    .display-product1-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4vh;
+    }
+
+    .display-product2-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4vh;
+        margin-top: 4vh;
+    }
+
+    .display-product3-project{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4vh;
+        margin-top: 4vh;
+    }
+
+    .work1-project{
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 80vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+   
+    }
+
+    .work2-project{
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 80vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+      
+    }
+
+    .work3-project{
+        display:flex;
+        object-fit: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        box-shadow:  0 10px 10px #00000030;
+        border-radius: 12px;
+        height: 80vh;
+        padding: 10vh;
+        overflow: hidden;
+        transition: 0.3s;
+        
+    }
+
+    .work1-project:hover{
+        transform: scale(1.02);
+    }
+
+    .work2-project:hover{
+        transform: scale(1.02);
+    }
+
+    .work3-project:hover{
+        transform: scale(1.02);
+    }
+
+
+
+    #contact-section{
+        padding-top: 95px;
+        padding-bottom: 15vh;
+        margin-left: 30vh;
+        padding-left: 4vh;
+        padding-right: 4vh;
+    }
+    
+    .contact-title h1{
+        font-size: 2.986rem;
+        font-family: "Montserrat", sans-serif;
+        color: #5673A7;
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    
+    }
+    
+    .contact-container{
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 12px;
+        height: 100%;
+        min-height: 0px;
+        min-width: 400px;
+        
+    }
+    
+    .input{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 4vh;
+        width: 100%;
+        
+    }
+    
+    
+    .contact-inputs{
+        font-size: 0.833rem;
+        font-family: "Montserrat", sans-serif;
+        min-width: 0vh;
+        min-height: 0vh;
+        padding-left: 25px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    
+    /* contact input height interfers with text-input "rows"-command. therefore separate class*/
+    
+    .message-input{
+        font-size: 0.833rem;
+        font-family: "Montserrat", sans-serif;
+        min-width: 0vh;
+        padding-left: 25px;
+        padding-top: 2vh;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    
+    
+    #contact-button{
+        box-sizing: border-box;
+        font-size: 1.8rem;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        cursor: pointer;
+        align-self: flex-start;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background-color: #5282db;
+        margin-top:0vh;
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 0vh;
+    }
+    
+    #contact-button:hover{
+        background-color: #5673A7;
+    }
+    
+
+    footer{ 
+        box-sizing: border-box;
+        color: #d9d9d9;
+        margin-top: 15vh;
+        margin-left: 0vh;
+        z-index: 0;
+    }
+    
+    .footer-content{
+        border-radius: 12px 12px 0px 0px;
+        position: absolute;
+        background-color: #1e1e1e;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 4vh;
+        margin-left: 0;
+        
+        width: 100%;
+        height: 25vh;   
+    }
+    
+    .footer-logo{
+        display: none;
+        align-self: center;
+        padding-top: 4vh;
+    }
+    
+    .footer-logo img{
+        width: 0vh;
+    }
+    
+    .footer-title{
+        position: absolute;
+        padding-top: 4vh;
+    }
+    
+    .footer-content{
+        text-align: center;
+        gap: 30px;
+        padding-right: 4vh;
+        padding-left: 0vh;
+        min-width: 600px;
+    }
+
+    .footer-content p{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-top: 10vh;
+
+    }
+    
+    /* Hr is creates a break, or functions as a seperator, in this case the for the footer sections */
+    
+    .footer-content hr{
+        display: none;
+        width: 100%;
+        margin-top: 4vh;
+    }
+    
+    .skill-set{
+        margin-left: 34vh;
+    }
+}
